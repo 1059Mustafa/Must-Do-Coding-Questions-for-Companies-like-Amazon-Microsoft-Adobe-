@@ -1,0 +1,15 @@
+class Solution{
+	public:
+    	long long findNth(long long N)
+    {
+        long long temp=1;
+        long long ans=0;
+        while(N!=0)
+        {
+            ans=ans+temp*(N%9);
+            temp=temp*10;
+            N=N/9;
+        }
+        return ans;
+    }
+};
